@@ -66,6 +66,7 @@
                             <!--<includes></includes>-->
                             <!--<message>Test commit</message>-->
                             <!--<pushChanges>false</pushChanges>-->
+                            <workingDirectory>${basedir}/core</workingDirectory>
 
                         </configuration>
                     </execution>
