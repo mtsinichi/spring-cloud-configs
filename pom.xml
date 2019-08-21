@@ -8,10 +8,71 @@
     <version>0.1.0</version>
     <packaging>pom</packaging>
 
+    <scm>
+        <connection>scm:git:https://github.com/mtsinichi/spring-cloud-configs.git</connection>
+        <developerConnection>scm:git:https://github.com/mtsinichi/spring-cloud-configs.git</developerConnection>
+        <url>https://github.com/mtsinichi/spring-cloud-configs</url>
+    </scm>
+
     <modules>
         <module>order-management-service</module>
         <module>configuration-service</module>
         <module>user-management-service</module>
     </modules>
+
+    <properties>
+        <checkout.basedir>${basedir}/clone</checkout.basedir>
+    </properties>
+
+    <build>
+        <plugins>
+
+            <!-- git repository -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-scm-plugin</artifactId>
+                <version>1.9.5</version>
+
+                <executions>
+                    <execution>
+                        <id>checkout-proejct</id>
+                        <goals>
+                            <goal>checkout</goal>
+                        </goals>
+                        <!--<phase>validate</phase>-->
+                        <configuration>
+                            <connectionType>url</connectionType>
+                            <checkoutDirectory>${project.build.directory}/module1</checkoutDirectory>
+                            <!--<username>tanhm2</username>-->
+                            <!--<password>Parsvik@007</password>-->
+
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>push-proejct</id>
+                        <goals>
+                            <goal>checkin</goal>
+                        </goals>
+                        <!--<phase>validate</phase>-->
+                        <configuration>
+                            <!--<connectionType>url</connectionType>-->
+                            <!--<checkoutDirectory>${project.build.directory}/module1</checkoutDirectory>-->
+                            <!--<username>tanhm2</username>-->
+                            <!--<password>Parsvik@007</password>-->
+                            <basedir>${basedir}</basedir>
+                            <!--<includes></includes>-->
+                            <message>Test commit</message>
+                            <pushChanges>false</pushChanges>
+
+                        </configuration>
+                    </execution>
+
+                </executions>
+
+            </plugin>
+
+        </plugins>
+    </build>
 
 </project>
