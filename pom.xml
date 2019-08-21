@@ -56,7 +56,7 @@
                         </goals>
                         <!--<phase>validate</phase>-->
                         <configuration>
-                            <!--<connectionType>url</connectionType>-->
+                            <connectionType>url</connectionType>
                             <!--<checkoutDirectory>${project.build.directory}/module1</checkoutDirectory>-->
                             <!--<username>tanhm2</username>-->
                             <!--<password>Parsvik@007</password>-->
