@@ -32,17 +32,19 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-scm-plugin</artifactId>
                 <version>1.9.5</version>
-
+                <configuration>
+                    <checkoutDirectory>${basedir}/core</checkoutDirectory>
+                    <connectionType>url</connectionType>
+                    <basedir>${basedir}</basedir>
+                </configuration>
                 <executions>
                     <execution>
-                        <id>checkout-proejct</id>
+                        <id>git-pull-mvn</id>
                         <goals>
                             <goal>checkout</goal>
                         </goals>
                         <!--<phase>validate</phase>-->
                         <configuration>
-                            <connectionType>url</connectionType>
-                            <checkoutDirectory>${project.build.directory}/module1</checkoutDirectory>
                             <!--<username>tanhm2</username>-->
                             <!--<password>Parsvik@007</password>-->
 
@@ -50,17 +52,17 @@
                     </execution>
 
                     <execution>
-                        <id>push-proejct</id>
+                        <id>git-push-mvn</id>
                         <goals>
                             <goal>checkin</goal>
                         </goals>
                         <!--<phase>validate</phase>-->
                         <configuration>
-                            <connectionType>url</connectionType>
+                            <!--<connectionType>url</connectionType>-->
                             <!--<checkoutDirectory>${project.build.directory}/module1</checkoutDirectory>-->
                             <!--<username>tanhm2</username>-->
                             <!--<password>Parsvik@007</password>-->
-                            <basedir>${basedir}</basedir>
+                            <!--<basedir>${basedir}</basedir>-->
                             <!--<includes></includes>-->
                             <!--<message>Test commit</message>-->
                             <!--<pushChanges>false</pushChanges>-->
