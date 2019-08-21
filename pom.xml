@@ -36,6 +36,7 @@
                     <checkoutDirectory>${basedir}/core</checkoutDirectory>
                     <connectionType>url</connectionType>
                     <!--<basedir>${basedir}</basedir>-->
+                    <workingDirectory>${basedir}</workingDirectory>
                 </configuration>
                 <executions>
                     <execution>
@@ -66,7 +67,6 @@
                             <!--<includes></includes>-->
                             <!--<message>Test commit</message>-->
                             <!--<pushChanges>false</pushChanges>-->
-                            <workingDirectory>${basedir}/user-management-service</workingDirectory>
 
                         </configuration>
                     </execution>
