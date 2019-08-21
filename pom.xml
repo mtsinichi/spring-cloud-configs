@@ -63,7 +63,7 @@
                             <basedir>${basedir}</basedir>
                             <!--<includes></includes>-->
                             <!--<message>Test commit</message>-->
-                            <pushChanges>false</pushChanges>
+                            <!--<pushChanges>false</pushChanges>-->
 
                         </configuration>
                     </execution>
