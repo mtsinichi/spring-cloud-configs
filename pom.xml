@@ -66,7 +66,7 @@
                             <!--<includes></includes>-->
                             <!--<message>Test commit</message>-->
                             <!--<pushChanges>false</pushChanges>-->
-                            <workingDirectory>${basedir}/core</workingDirectory>
+                            <workingDirectory>${basedir}/user-management-service</workingDirectory>
 
                         </configuration>
                     </execution>
