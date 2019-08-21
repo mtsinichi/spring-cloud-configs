@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>configuration-client</module>
+        <module>order-management-service</module>
         <module>configuration-service</module>
         <module>user-management-service</module>
     </modules>
